@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-        section.style.opacity = "0";
-        section.style.transition = "opacity 1s";
-    });
+    const title = document.querySelector("header h1");
+    title.style.opacity = "0";
+    title.style.transform = "translateY(-20px)";
+    title.style.transition = "opacity 1s, transform 1s";
 
     setTimeout(() => {
-        sections.forEach(section => {
-            section.style.opacity = "1";
-        });
+        title.style.opacity = "1";
+        title.style.transform = "translateY(0)";
     }, 500);
 });
